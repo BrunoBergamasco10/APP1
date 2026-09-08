@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Parte 2 - Execução do Pedido (corrigido)" id="parte2corrigido">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===================== LANE BACKGROUNDS ===================== -->
+        <mxCell id="lane_cliente" value="Cliente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#666666;verticalAlign=middle;fontStyle=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="40" width="3200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_shopee" value="Shopee" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="200" width="3200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_atelie" value="Ateliê" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="360" width="3200" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_log" value="Logística" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="620" width="3200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_forn" value="Fornecedor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#666666;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="760" width="3200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="PARTE 2: EXECUÇÃO DO PEDIDO (versão corrigida)" style="text;html=1;fontStyle=1;fontSize=16;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="0" width="1000" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== CLIENTE ===================== -->
+        <mxCell id="c_start" value="Novo Pedido&#10;Iniciado" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_inicia" value="Inicia pedido no&#10;app Shopee" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_recebeproduto" value="Recebe&#10;produto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="80" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_gw_ok" value="Produto OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="70" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_end_sucesso" value="Pedido Entregue&#10;com Sucesso" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="2390" y="80" width="70" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== SHOPEE ===================== -->
+        <mxCell id="s_recebeplat" value="Recebe pedido&#10;na plataforma" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_integra" value="Integra pedido&#10;no Bling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_etiqueta" value="Gera Etiqueta/&#10;Despacho" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_recebeponto" value="Recebe no&#10;Ponto de Coleta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_enviotrans" value="Realiza Envio via&#10;Transportadora" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_abrecontest" value="Abre contestação/&#10;relata problema" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2380" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s_processacontest" value="Processa&#10;contestação" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2560" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== ATELIÊ ===================== -->
+        <mxCell id="a_start" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a_analisa" value="Analisa&#10;pedido" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="220" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_gw_custom" value="Customização /&#10;Pré-pronta?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_bordadeira" value="Bordadeira Eletrônica&#10;(personalização)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="580" y="380" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_seleciona" value="Seleciona peça&#10;em estoque" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="580" y="540" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_qualidade" value="Controle de&#10;Qualidade" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="780" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_ferro" value="Passa ferro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="960" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_embala" value="Embala (saquinho&#10;transparente + preta)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="460" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_pacote" value="Gera pacote&#10;pronto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_gw_retorno" value="Retorno ou&#10;Reembolso?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="2570" y="530" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a_orienta" value="Orienta&#10;devolução" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2750" y="450" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_cancela" value="Cancela pedido e emite&#10;logística reversa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2940" y="450" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_reembolsoproc" value="Processa&#10;reembolso" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2750" y="560" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_end_devolucao" value="Devolução&#10;Iniciada" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="3130" y="450" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_end_fim3" value="FIM 3: Atendimento&#10;Encerrado" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2940" y="560" width="70" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== LOGÍSTICA ===================== -->
+        <mxCell id="l_leve" value="Leve pacote ao Ponto&#10;de Coleta da Shopee" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="660" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== FORNECEDOR ===================== -->
+        <mxCell id="f_recebe" value="Recebe&#10;solicitação" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="220" y="800" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== EDGES: CLIENTE / SHOPEE / ATELIÊ (início) ===================== -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="c_start" target="c_inicia"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="c_inicia" target="s_recebeplat"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s_recebeplat" target="s_integra"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="s_integra" target="a_analisa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_start" target="a_analisa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_analisa" target="a_gw_custom"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ramificação A/B -->
+        <mxCell id="e7" value="A: Customizada" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_gw_custom" target="a_bordadeira"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="B: Pré-pronta (estoque)" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_gw_custom" target="a_seleciona"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- CORREÇÃO: as duas rotas convergem para Controle de Qualidade (antes havia uma ligação tracejada sem sentido entre "Seleciona peça em estoque" e "Bordadeira Eletrônica") -->
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_bordadeira" target="a_qualidade"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_seleciona" target="a_qualidade"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_qualidade" target="a_ferro"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- CORREÇÃO: removida a primeira caixa duplicada "Gera pacote pronto" (antes ficava entre Passa ferro e Embala, o que não fazia sentido, pois o pacote não pode ficar pronto antes de ser embalado) -->
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_ferro" target="a_embala"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_embala" target="a_pacote"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- pacote pronto dispara etiqueta (Shopee) e envio ao ponto de coleta (Logística) -->
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="a_pacote" target="s_etiqueta"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="a_pacote" target="l_leve"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s_etiqueta" target="s_recebeponto"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="l_leve" target="s_recebeponto"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s_recebeponto" target="s_enviotrans"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e19" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="s_enviotrans" target="c_recebeproduto"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e20" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="c_recebeproduto" target="c_gw_ok"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e21" value="Sim" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="c_gw_ok" target="c_end_sucesso"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e22" value="Não - Exceção" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="c_gw_ok" target="s_abrecontest"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- CORREÇÃO: "Processa contestação" foi removido da ligação solta com "Recebe pedido na plataforma" (início do processo) e reposicionado no fluxo real de pós-venda -->
+        <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s_abrecontest" target="s_processacontest"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e24" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="s_processacontest" target="a_gw_retorno"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- CORREÇÃO: eliminado o laço circular sem sentido entre "Cancela pedido" e "Orienta devolução"; fluxo agora é linear até os eventos finais -->
+        <mxCell id="e25" value="Retorno" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_gw_retorno" target="a_orienta"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e26" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_orienta" target="a_cancela"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e27" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_cancela" target="a_end_devolucao"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e28" value="Reembolso" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_gw_retorno" target="a_reembolsoproc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e29" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="a_reembolsoproc" target="a_end_fim3"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Fornecedor fornece materiais para as duas rotas de produção -->
+        <mxCell id="e30" value="Fornece tecidos, linhas, botões,&#10;aviamentos e embalagens" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="f_recebe" target="a_bordadeira"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e31" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;" edge="1" parent="1" source="f_recebe" target="a_seleciona"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
